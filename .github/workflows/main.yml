@@ -54,5 +54,3 @@ jobs:
         images: | 
           niltonpita/kube-news:${{ github.run_number }}
         
-        
-          
