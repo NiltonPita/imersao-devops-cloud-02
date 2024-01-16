@@ -47,7 +47,8 @@ jobs:
           id: install
                    
       - name: Configurar o KubeConfig
-        run: aws eks update-kubeconfig --name testeNT-eks --region us-east-1
+          run: aws eks update-kubeconfig --name testeNT-eks --region us-east-1
+          run: kubectl apply -f kube-news/k8s/deployment.yaml        
 
       - name: Deploy to Kubernetes cluster
         uses: Azure/k8s-deploy@v4.9
