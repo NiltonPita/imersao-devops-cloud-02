@@ -45,11 +45,7 @@ jobs:
         with:
           version: 'v1.27.0' # default is latest stable
           id: install
-           context:
-           cluster: arn:aws:eks:us-east-1:654654495661:cluster/testeNT-eks
-            user: arn:aws:eks:us-east-1:654654495661:cluster/testeNT-eks
-            name: arn:aws:eks:us-east-1:654654495661:cluster/testeNT-ek
-            
+                   
       - name: Configurar o KubeConfig
         run: aws eks update-kubeconfig --name testeNT-eks --region us-east-1
          
